@@ -5,7 +5,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 
 library.add(fas);
 
-export default function Searchbar({ findSearchInput }) {
+export default function Searchbar({ findSearchInput, findImg }) {
   const query = useRef();
 
   const handleClick = () => {
@@ -17,6 +17,7 @@ export default function Searchbar({ findSearchInput }) {
     e.preventDefault();
     console.log(query.current.value);
     findSearchInput(query.current.value.toLowerCase());
+    findImg(query.current.value.toLowerCase());
   };
 
   function focus() {

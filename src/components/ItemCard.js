@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ItemCard({ result }) {
+export default function ItemCard({ result, img }) {
   const { id, item, tags, type, category, description } = result;
 
   let Capitalize = (input) => {
@@ -49,7 +49,9 @@ export default function ItemCard({ result }) {
 
   return (
     <div className="item-card--container" data={type} key={id}>
-      <div className="item-card--fake-img">IMAGE HERE</div>
+      <div className="item-card--unsplash-img">
+        <img src={img} alt={item}></img>
+      </div>
       <div className="item-card--overview">
         <h3 className="item-card--title">{Capitalize(item)}</h3>
         {TypeCheck(type)}
