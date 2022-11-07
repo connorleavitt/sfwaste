@@ -18,6 +18,7 @@ const data = [
       "raspberry",
       "blueberry",
       "kiwifruit",
+      "kiwi",
       "passionfruit",
       "watermelon",
       "tomato",

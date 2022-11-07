@@ -49,8 +49,8 @@ export default function ItemCard({ result, img }) {
 
   return (
     <div className="item-card--container" data={type} key={id}>
-      <div className="item-card--unsplash-img">
-        <img src={img} alt={item}></img>
+      <div className="item-card--unsplash-img-container">
+        <img className="item-card--unsplash-img" src={img} alt={item}></img>
       </div>
       <div className="item-card--overview">
         <h3 className="item-card--title">{Capitalize(item)}</h3>

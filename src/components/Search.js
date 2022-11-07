@@ -58,7 +58,10 @@ export default function Search() {
     const token = process.env.REACT_APP_UNSPLASH_API_ACCESS_KEY;
     const unsplashUrl = process.env.REACT_APP_UNSPLASH_URL;
 
-    const url = `${unsplashUrl}?page=1&query=${input}&client_id=${token}`;
+    const url = `${unsplashUrl}?page=1&query=${input.replace(
+      / /g,
+      "_"
+    )}&client_id=${token}`;
 
     axios.get(url).then((res) => {
       console.log(res);
