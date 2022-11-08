@@ -4,7 +4,7 @@ import CustomLink from "../components/CustomLink";
 export default function Navbar(props) {
   return (
     <nav className="nav">
-      <ul>
+      <ul className="nav-ul">
         <CustomLink to="/home">Home</CustomLink>
         <CustomLink to="/search">Search</CustomLink>
         <CustomLink to="/guides">Guides</CustomLink>
