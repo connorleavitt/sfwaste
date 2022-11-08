@@ -8,12 +8,16 @@ library.add(fas);
 export default function Searchbar({ findSearchInput, findImg }) {
   const query = useRef();
 
-  const handleClick = () => {
+  const handleSearchClick = () => {
     console.log(query.current.value);
     findSearchInput(query.current.value.toLowerCase());
   };
 
-  const handleSubmit = (e) => {
+  const handleDeleteClick = () => {
+    query.current.value = "";
+  };
+
+  const handleSearchSubmit = (e) => {
     e.preventDefault();
     console.log(query.current.value);
     findSearchInput(query.current.value.toLowerCase());
@@ -26,10 +30,10 @@ export default function Searchbar({ findSearchInput, findImg }) {
 
   return (
     <div onClick={focus} className="searchbar-wrapper">
-      <button className="searchbar-btn" onClick={handleClick}>
+      <button className="searchbar-btn" onClick={handleSearchClick}>
         <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
       </button>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSearchSubmit}>
         <label>
           <input
             ref={query}
@@ -39,6 +43,9 @@ export default function Searchbar({ findSearchInput, findImg }) {
           />
         </label>
       </form>
+      <button className="searchbar-delete-btn" onClick={handleDeleteClick}>
+        <FontAwesomeIcon icon="fa-solid fa-x" />{" "}
+      </button>
     </div>
   );
 }

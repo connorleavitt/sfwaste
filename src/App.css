@@ -67,6 +67,8 @@ body {
 
 /* MAIN (component) */
 
+/* SEARCH (component) */
+
 .search-wrapper {
   display: flex;
   flex-direction: column;
@@ -79,14 +81,17 @@ body {
   align-items: center;
   gap: 1em;
   margin: 0;
+  margin-top: 1rem;
   padding: 0.3em;
+  padding-right: 1rem;
   width: min-content;
   border-radius: 15px;
   border: 2px solid black;
   cursor: pointer;
 }
 
-.searchbar-btn {
+.searchbar-btn,
+.searchbar-delete-btn {
   border: 0;
   background-color: transparent;
   display: flex;
@@ -101,6 +106,11 @@ body {
 #search {
   border: 0;
   outline: none;
+}
+
+#search:focus {
+  background-color: beige;
+  /* outline: none; */
 }
 
 .item-card--container {
