@@ -50,6 +50,23 @@ body {
   text-decoration: underline;
 }
 
+/* MAIN (css) */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.main-title {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+/* MAIN (component) */
+
 .search-wrapper {
   display: flex;
   flex-direction: column;
@@ -157,27 +174,75 @@ body {
 
 /* GUIDES */
 
-.guides_preview_img {
-  max-width: 150px;
-}
-
 .main-guide-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 250px;
+  justify-content: flex-end;
 }
 
 .main-guide-container ul {
-  list-style-type: none;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  list-style-type: square;
+  padding: 0 2rem;
   margin: 0;
+}
+
+.pdf_list_item {
+  margin: 0.25rem;
+  padding: 0.25rem 0;
+}
+
+.subgrid-guides-container {
+  display: flex;
+  flex-direction: column;
+  /* text-align: left; */
+  /* padding: 0 1rem; */
+  margin: 0 auto;
+}
+
+.guides-subtitle {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.compost-title {
+  color: rgb(59, 182, 59);
+}
+
+.recycle-title {
+  color: rgb(42, 156, 194);
+}
+
+.guides_preview_img {
+  max-width: 250px;
 }
 
 .subgrid-guides-container a,
 .subgrid-guides-container a:visited {
   text-decoration: none;
   color: green;
+  font-size: 1.25rem;
 }
 
 .subgrid-guides-container a:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .main-guide-container {
+    max-width: 800px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .main-guide-container {
+    max-width: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

@@ -4,9 +4,12 @@ export default function Guides() {
   return (
     <main className="main">
       <h3 className="main-title">PRINTABLE GUIDES & SIGNAGE</h3>
+      <p className="main-subtext">
+        All links redirect to downloadable PDF file.
+      </p>
       <div className="main-guide-container">
         <div className="subgrid-guides-container">
-          <h3 className="guides-subtitle">Compost</h3>
+          <h3 className="guides-subtitle compost-title">Compost</h3>
           <a href="https://www.recology.com/wp-content/uploads/2016/10/85x11_horiz_withexcludes_compost.pdf">
             <img
               className="guides_preview_img"
@@ -40,7 +43,7 @@ export default function Guides() {
         </div>
 
         <div className="subgrid-guides-container">
-          <h3 className="guides-subtitle">Recycle</h3>
+          <h3 className="guides-subtitle recycle-title">Recycle</h3>
           <a href="https://www.recology.com/wp-content/uploads/2016/10/85x11_horiz_withexcludes_recycle.pdf">
             <img
               className="guides_preview_img"
