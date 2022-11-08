@@ -160,3 +160,24 @@ body {
 .guides_preview_img {
   max-width: 150px;
 }
+
+.main-guide-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.main-guide-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subgrid-guides-container a,
+.subgrid-guides-container a:visited {
+  text-decoration: none;
+  color: green;
+}
+
+.subgrid-guides-container a:hover {
+  text-decoration: underline;
+}
