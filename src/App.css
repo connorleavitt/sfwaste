@@ -154,3 +154,9 @@ body {
 .item-card--type-landfill {
   font-weight: bold;
 }
+
+/* GUIDES */
+
+.guides_preview_img {
+  max-width: 150px;
+}
