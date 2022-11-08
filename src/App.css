@@ -90,6 +90,10 @@ body {
   cursor: pointer;
 }
 
+.searchbar-wrapper[data-active-focus="active"] {
+  box-shadow: 0 0 5px #2ba6f3;
+}
+
 .searchbar-btn,
 .searchbar-delete-btn {
   border: 0;
@@ -106,11 +110,6 @@ body {
 #search {
   border: 0;
   outline: none;
-}
-
-#search:focus {
-  background-color: beige;
-  /* outline: none; */
 }
 
 .item-card--container {

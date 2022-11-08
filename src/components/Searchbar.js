@@ -1,16 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 library.add(fas);
 
 export default function Searchbar({ findSearchInput, findImg }) {
   const query = useRef();
+  const [searchFocus, setSearchFocus] = useState();
 
   const handleSearchClick = () => {
     console.log(query.current.value);
     findSearchInput(query.current.value.toLowerCase());
+    findImg(query.current.value.toLowerCase());
+    handleSearchFocus();
   };
 
   const handleDeleteClick = () => {
@@ -22,6 +25,15 @@ export default function Searchbar({ findSearchInput, findImg }) {
     console.log(query.current.value);
     findSearchInput(query.current.value.toLowerCase());
     findImg(query.current.value.toLowerCase());
+    handleSearchFocus();
+  };
+
+  const handleSearchFocus = () => {
+    if (searchFocus === "active") {
+      return setSearchFocus("not-active");
+    } else {
+      return setSearchFocus("active");
+    }
   };
 
   function focus() {
@@ -29,11 +41,19 @@ export default function Searchbar({ findSearchInput, findImg }) {
   }
 
   return (
-    <div onClick={focus} className="searchbar-wrapper">
+    <div
+      onClick={focus}
+      className="searchbar-wrapper"
+      data-active-focus={searchFocus}
+    >
       <button className="searchbar-btn" onClick={handleSearchClick}>
         <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
       </button>
-      <form onSubmit={handleSearchSubmit}>
+      <form
+        onSubmit={handleSearchSubmit}
+        onFocus={handleSearchFocus}
+        onBlur={handleSearchFocus}
+      >
         <label>
           <input
             ref={query}
