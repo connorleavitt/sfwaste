@@ -12,6 +12,13 @@ body {
   text-align: center;
 }
 
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   background-color: lightgreen;
 }
@@ -50,6 +57,8 @@ body {
   text-decoration: underline;
 }
 
+/* HOME */
+
 /* MAIN (css) */
 
 .main {
@@ -60,9 +69,58 @@ body {
   margin-bottom: 3rem;
 }
 
+.main-hero {
+  background-image: url(https://www.recology.com/wp-content/uploads/2016/04/RECOLOGY.COM-HOMEPAGE-6-1.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  width: 1000px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.main-hero-content-wrapper {
+  position: absolute;
+  top: 20px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.main-home-title {
+  background-color: rgba(213, 68, 63, 0.5);
+  border-radius: 5px;
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.main-home-body-content {
+  background-color: rgba(65, 213, 63, 0.5);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 0;
+}
+
 .main-title {
   font-size: 2rem;
   margin-bottom: 0.25rem;
+}
+
+/* SEARCH section within HOME */
+.main-search-subtitle {
+  font-size: 3rem;
+}
+
+/* GUIDES section within HOME */
+.main-guides-subtitle {
+  font-size: 3rem;
 }
 
 /* MAIN (component) */
