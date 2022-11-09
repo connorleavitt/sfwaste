@@ -116,7 +116,8 @@ body {
 
 .bins-wrapper {
   display: flex;
-  border: 2px solid red;
+  margin: 1rem;
+  gap: 1rem;
 }
 
 .bin-item-wrapper {
