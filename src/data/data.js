@@ -853,14 +853,14 @@ const data = [
     category: "toiletry tubes",
     description: "toothpaste tubes, cream, ointment (empty)",
   },
-  //   {
-  //     id: 87,
-  //     type: "landfill",
-  //     item: "",
-  //     tags: [""],
-  //     category: "",
-  //     description: "",
-  //   },
+  {
+    id: 87,
+    type: "other",
+    item: "battery",
+    tags: [""],
+    category: "",
+    description: "",
+  },
   //   {
   //     id: 88,
   //     type: "landfill",

@@ -112,6 +112,27 @@ body {
   outline: none;
 }
 
+/* BINS (SEARCH COMP) */
+
+.bins-wrapper {
+  display: flex;
+  border: 2px solid red;
+}
+
+.bin-item-wrapper {
+  opacity: 0.2;
+}
+
+.bin-img {
+  max-width: 100px;
+}
+
+.bin-item-wrapper-active {
+  opacity: 1;
+}
+
+/* ITEM CARD (SEARCH COMP) */
+
 .item-card--container {
   margin: 2rem;
   padding: 0.25rem;

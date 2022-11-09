@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import data from "../data/data";
+import Bins from "./Bins";
 import ItemCard from "./ItemCard";
 import NotFound from "./NotFound";
 import Searchbar from "./Searchbar";
-import axios from "axios";
+// import axios from "axios";
 
 export default function Search() {
   const [searchInput, setSearchInput] = useState({
@@ -11,7 +12,7 @@ export default function Search() {
     isSubmitted: false,
   });
   const [result, setResult] = useState({});
-  const [imgResult, setImgResult] = useState([]);
+  // const [imgResult, setImgResult] = useState([]);
 
   function findSearchInput(input) {
     setSearchInput({
@@ -43,7 +44,7 @@ export default function Search() {
         }
       }
 
-      setResult({
+      return setResult({
         id: findItem.id,
         item: findItem.item,
         type: findItem.type,
@@ -54,28 +55,14 @@ export default function Search() {
     }
   }
 
-  function findImg(input) {
-    const token = process.env.REACT_APP_UNSPLASH_API_ACCESS_KEY;
-    const unsplashUrl = process.env.REACT_APP_UNSPLASH_URL;
-
-    const url = `${unsplashUrl}?page=1&query=${input.replace(
-      / /g,
-      "_"
-    )}&client_id=${token}`;
-
-    axios.get(url).then((res) => {
-      console.log(res);
-      setImgResult(res.data.results[0].urls.small);
-    });
-  }
-
   return (
     <>
       <div className="search-wrapper">
-        <Searchbar findSearchInput={findSearchInput} findImg={findImg} />
+        <Searchbar findSearchInput={findSearchInput} />
+        <Bins result={result} />
         <div className="search-result-container">
           {searchInput.isSubmitted && !result.notfound && (
-            <ItemCard result={result} img={imgResult} />
+            <ItemCard result={result} />
           )}
           {result.notfound && <NotFound />}
         </div>

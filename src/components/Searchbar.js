@@ -5,14 +5,13 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 
 library.add(fas);
 
-export default function Searchbar({ findSearchInput, findImg }) {
+export default function Searchbar({ findSearchInput }) {
   const query = useRef();
   const [searchFocus, setSearchFocus] = useState();
 
   const handleSearchClick = () => {
     console.log(query.current.value);
     findSearchInput(query.current.value.toLowerCase());
-    findImg(query.current.value.toLowerCase());
     handleSearchFocus();
   };
 
@@ -24,16 +23,13 @@ export default function Searchbar({ findSearchInput, findImg }) {
     e.preventDefault();
     console.log(query.current.value);
     findSearchInput(query.current.value.toLowerCase());
-    findImg(query.current.value.toLowerCase());
-    handleSearchFocus();
   };
 
   const handleSearchFocus = () => {
     if (searchFocus === "active") {
       return setSearchFocus("not-active");
-    } else {
-      return setSearchFocus("active");
     }
+    return setSearchFocus("active");
   };
 
   function focus() {
@@ -44,6 +40,7 @@ export default function Searchbar({ findSearchInput, findImg }) {
     <div
       onClick={focus}
       className="searchbar-wrapper"
+      // onFocus={handleSearchFocus}
       data-active-focus={searchFocus}
     >
       <button className="searchbar-btn" onClick={handleSearchClick}>

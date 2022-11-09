@@ -1,7 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function ItemCard({ result, img }) {
+import axios from "axios";
+import ItemCardImg from "./ItemCardImg";
+
+export default function ItemCard({ result }) {
   const { id, item, tags, type, category, description } = result;
+  const [imgResult, setImgResult] = useState();
+  const [imgHidden, setImgHidden] = useState();
+
+  searchUnsplash(item);
+  function searchUnsplash(input) {
+    const token = process.env.REACT_APP_UNSPLASH_API_ACCESS_KEY;
+    const unsplashUrl = process.env.REACT_APP_UNSPLASH_URL;
+
+    const url = `${unsplashUrl}?page=1&query=${input.replace(
+      / /g,
+      "_"
+    )}&client_id=${token}`;
+    axios.get(url).then((res) => {
+      // console.log(res);
+      // console.log(result.tags);
+      if (res.data.results.length === 0) {
+        return setImgHidden("hidden");
+      } else {
+        setImgResult(res.data.results[0].urls.small);
+        return setImgHidden(null);
+      }
+    });
+  }
 
   let Capitalize = (input) => {
     if (input === null || input === undefined) return;
@@ -49,9 +75,7 @@ export default function ItemCard({ result, img }) {
 
   return (
     <div className="item-card--container" data={type} key={id}>
-      <div className="item-card--unsplash-img-container">
-        <img className="item-card--unsplash-img" src={img} alt={item}></img>
-      </div>
+      <ItemCardImg src={imgResult} hidden={imgHidden} alt={imgResult} />
       <div className="item-card--overview">
         <h3 className="item-card--title">{Capitalize(item)}</h3>
         {TypeCheck(type)}
