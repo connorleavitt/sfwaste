@@ -36,12 +36,12 @@ export default function Home() {
                 The environmental impacts of our society's waste play a huge
                 part on our planet's health. Waste in incinerators and landfills
                 create greenhouse gas emissions. Composting and recycling are an
-                effective way to reduce greenhouse gasses. Recycling and
-                composting require little or no investment and are accessible,
-                easy actions for everyone.<sup>1</sup>
+                effective way to reduce greenhouse gasses, require little or no
+                investment and are accessible, easy actions for everyone.
+                <sup>1</sup>
               </p>
             </div>
-            <hr className="info-break"></hr>
+            <hr className="info-break top"></hr>
             <div className="info-dropdown-container">
               <img
                 src="https://www.recology.com/wp-content/uploads/2016/10/CompostBin.jpg"
@@ -82,7 +82,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <hr className="info-break"></hr>
+            <hr className="info-break top"></hr>
           </div>
         </div>
 
@@ -93,8 +93,14 @@ export default function Home() {
             be thrown away in which bin. It will give you the bin type (compost,
             recycle, landfill or other), general description and related items.
           </p>
-          <img className="search-image" src={WhatBinImage} alt="what bin"></img>
+          <img
+            className="main-search-image"
+            src={WhatBinImage}
+            alt="what bin"
+          ></img>
         </div>
+        <hr className="info-break"></hr>
+
         <div className="main-guides-container">
           <h4 className="main-guides-subtitle">Printable Guides and Signage</h4>
           <p className="main-guides-body-content">
@@ -111,6 +117,17 @@ export default function Home() {
             alt="guides"
           ></img>
         </div>
+
+        <hr className="info-break"></hr>
+
+        <div className="main-learn-container">
+          <h4 className="main-learn-subtitle">Learn More!</h4>
+          <p className="main-learn-body-content">
+            Check out the Learn More section to view videos and read more
+            information on composting, recycling and more.
+          </p>
+        </div>
+
         <div className="footnotes-container">
           <p className="footnote-content">
             <sup>1</sup> Environmental Benefits of Recycling and Composting,

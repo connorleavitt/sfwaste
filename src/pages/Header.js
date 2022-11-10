@@ -7,7 +7,7 @@ export default function Header({ toggle }) {
   console.log(toggle);
   return (
     <header className="header">
-      <h1 className="header-title">SF Waste</h1>
+      <h1 className="header-title">SF WASTE</h1>
       <button
         onClick={toggle}
         className="nav-toggle"

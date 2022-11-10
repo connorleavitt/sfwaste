@@ -38,6 +38,7 @@ h4 {
   margin: 0;
   font-size: 1.5rem;
   padding: 0.25rem;
+  color: white;
 }
 
 .nav {
@@ -240,25 +241,37 @@ h4 {
   margin: 0;
 }
 
+@media (min-width: 800px) {
+  .main-hero {
+    width: 100%;
+  }
+  .main-hero-content-wrapper {
+    max-width: 100%;
+  }
+  .main-hero-title {
+    top: 30px;
+    width: fit-content;
+    left: 30px;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 3rem;
+  }
+
+  .main-hero-body-content {
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+  }
+}
+
 /* MAIN (QUICK) INFO */
-
-.main-info {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-}
-
-.main-info-content-wrapper {
-  /* border: 2px solid red; */
-}
 
 .main-info-top-content-wrapper {
   margin: 0 2rem;
-  /* border: 2px solid green; */
 }
 
 .main-info-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding: 1rem 0;
 }
 
@@ -311,15 +324,53 @@ h4 {
 }
 
 @media (min-width: 800px) {
-  .info-break {
-    max-width: 1050px;
+  .main-info {
+    margin: 5rem;
+  }
+
+  .main-info-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "info bins";
+  }
+
+  .main-info-top-content-wrapper {
+    grid-area: info;
+    margin: 1rem 3rem;
+    width: 75ch;
+  }
+
+  .main-info-title {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+
+  .main-info-subtitle {
+    font-size: 1.75rem;
+    padding: 0.75rem;
+    margin: 1rem;
+  }
+
+  .main-info-body-content {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0;
+  }
+  .top:first-of-type {
+    position: relative;
+    left: 25%;
+    width: 150%;
+    top: 30px;
+    border: 1px solid gray;
+  }
+
+  .top:last-of-type {
+    display: none;
   }
 
   .info-dropdown-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1000px;
+    grid-area: bins;
   }
   .info-dropdown-container img {
     height: 125px;
@@ -348,13 +399,57 @@ h4 {
 }
 
 /* SEARCH section within HOME */
+
+.main-search-container {
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .main-search-subtitle {
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+
+.main-search-body-content {
+  font-size: 1.3rem;
+}
+
+.main-search-image {
+  width: 100%;
 }
 
 /* GUIDES section within HOME */
+.main-guides-container {
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .main-guides-subtitle {
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+
+.main-guides-body-content {
+  font-size: 1.3rem;
+}
+
+.main-guides-image {
+  width: 100%;
+}
+
+/* LEARN section within HOME */
+.main-learn-container {
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-learn-subtitle {
+  font-size: 2.5rem;
+}
+
+.main-learn-body-content {
+  font-size: 1.3rem;
 }
 
 /* MAIN (component) */
