@@ -441,6 +441,7 @@ h4 {
 }
 
 /* LEARN section within HOME */
+
 .main-learn-container {
   margin: 1rem 2rem;
   display: flex;
@@ -803,5 +804,114 @@ h4 {
   .main-guide-container {
     max-width: 1000px;
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* LEARN MORE */
+
+.learn-header-title {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+.learn-btns-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  border: 0;
+  margin: 2rem 2rem;
+  width: 85%;
+}
+
+.learn-main-container-wrapper {
+  width: 100%;
+}
+
+.learn-btn {
+  border: 2px solid black;
+  border-radius: 5px;
+  color: white;
+}
+
+.learn-btn a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.learn-compost-btn {
+  background-color: rgb(2, 125, 0);
+}
+
+.learn-recycle-btn {
+  background-color: rgb(0, 78, 150);
+}
+
+.learn-videos-btn {
+  background-color: rgb(161, 80, 0);
+}
+
+.learn-main-container {
+  margin: 2rem 2rem;
+  padding: 1rem;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+
+.learn-main-container:nth-last-child(2) {
+  margin-top: 5rem;
+}
+
+.learn-main-container.compost {
+  background-color: rgb(233, 255, 233);
+}
+
+.learn-main-container.recycle {
+  background-color: rgb(233, 236, 255);
+}
+
+.learn-main-title {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.learn-info-subtitle {
+  font-size: 1.5rem;
+}
+
+.learn-info-body-content {
+  margin-bottom: 3rem;
+}
+.learn-info-body-content,
+.learn-benefits-list-item {
+  font-size: 1.3rem;
+}
+
+.learn-benefits-list {
+  text-align: left;
+}
+
+.learn-benefits-list-item {
+  margin-bottom: 0.7rem;
+}
+
+.footnotes-container {
+  width: 80%;
+  margin: 3rem 0;
+}
+
+.video-thumbnail-link,
+.video-thumbnail-img {
+  width: 100%;
+  margin: 0 0 3rem 0;
+}
+
+@media (min-width: 600px) {
+  .learn-main-container-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .learn-btn:hover {
   }
 }
