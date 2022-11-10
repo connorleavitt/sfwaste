@@ -75,7 +75,6 @@ export default function ItemCard({ result }) {
 
   return (
     <div className="item-card--container" data={type} key={id}>
-      <ItemCardImg src={imgResult} hidden={imgHidden} alt={imgResult} />
       <div className="item-card--overview">
         <h3 className="item-card--title">{Capitalize(item)}</h3>
         {TypeCheck(type)}
@@ -89,6 +88,7 @@ export default function ItemCard({ result }) {
         </p>
         {GetTagList(tags)}
       </div>
+      <ItemCardImg src={imgResult} hidden={imgHidden} alt={imgResult} />
     </div>
   );
 }
