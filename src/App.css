@@ -278,6 +278,7 @@ h4 {
 .main-info-subtitle {
   font-size: 1.5rem;
   padding: 0.75rem;
+  color: rgb(73, 73, 73);
 }
 
 .main-info-body-content {
@@ -326,12 +327,14 @@ h4 {
 @media (min-width: 800px) {
   .main-info {
     margin: 5rem;
+    max-width: 1400px;
   }
 
   .main-info-content-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "info bins";
+    justify-items: center;
   }
 
   .main-info-top-content-wrapper {
@@ -450,6 +453,75 @@ h4 {
 
 .main-learn-body-content {
   font-size: 1.3rem;
+}
+
+@media (min-width: 800px) {
+  .main-search-container {
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 1200px;
+    /* background-color: red; */
+  }
+
+  .main-search-subtitle {
+    /* border: 3px solid red; */
+  }
+
+  .main-search-body-content {
+    background-color: rgb(216, 227, 0);
+    width: 50%;
+    position: absolute;
+    left: 55%;
+    bottom: 20%;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 5;
+    padding: 3rem;
+  }
+
+  .main-search-image {
+    position: absolute;
+    right: -40%;
+    left: 0;
+    bottom: 10%;
+    max-width: 800px;
+    border: 3px solid black;
+    border-radius: 10px;
+    transform: rotateZ(-1deg);
+  }
+
+  .main-guides-container {
+    margin: 5rem;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+      "title img"
+      "content img";
+    justify-items: center;
+    align-items: center;
+  }
+
+  .main-guides-subtitle {
+    grid-area: title;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-guides-body-content {
+    grid-area: content;
+    max-width: 75ch;
+    margin: 0;
+    padding: 3rem;
+  }
+
+  .main-guides-image {
+    max-width: 800px;
+    grid-area: img;
+  }
 }
 
 /* MAIN (component) */
