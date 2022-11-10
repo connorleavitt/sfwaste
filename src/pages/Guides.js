@@ -3,7 +3,7 @@ import React from "react";
 export default function Guides() {
   return (
     <main className="main">
-      <h3 className="main-title">PRINTABLE GUIDES & SIGNAGE</h3>
+      <h3 className="main-title guides-title">PRINTABLE GUIDES & SIGNAGE</h3>
       <p className="main-subtext">
         All links redirect to downloadable PDF file.
       </p>
