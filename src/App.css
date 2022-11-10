@@ -739,6 +739,15 @@ h4 {
 
 /* GUIDES */
 
+.guides-title {
+  margin: 3rem 1rem 0 1rem;
+}
+
+.main-subtext {
+  font-weight: 600;
+  margin: 2rem;
+}
+
 .main-guide-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -919,6 +928,15 @@ h4 {
   margin: 0 0 3rem 0;
 }
 
+.video-thumbnail-img:hover {
+  border: 5px solid rgb(217, 146, 146);
+}
+
+.video-subtext {
+  text-align: left;
+  padding-left: 1rem;
+}
+
 @media (min-width: 600px) {
   .learn-main-container-wrapper {
     max-width: 1200px;
@@ -996,5 +1014,18 @@ h4 {
   .video-thumbnail-img {
     max-width: 500px;
     margin: 0 0 3rem 0;
+  }
+
+  .video-subtext {
+    padding-left: 10rem;
+  }
+
+  .learn-videos-content-wrapper {
+    position: relative;
+  }
+  .learn-videos-content-wrapper > .main-subtext {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
   }
 }

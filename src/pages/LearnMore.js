@@ -120,6 +120,7 @@ export default function LearnMore() {
         <div className="learn-main-container videos">
           <div className="learn-videos-content-wrapper" id="videos">
             <h3 className="learn-main-title">Videos</h3>
+            <p className="main-subtext">All video links redirect to YouTube*</p>
             <h4 className="learn-info-subtitle">
               Waste Zero Training - Better at the Bin
             </h4>
@@ -129,6 +130,9 @@ export default function LearnMore() {
               more about how to properly sort materials and why sustainable
               practices are critical to our shared effort to achieve a waste
               zero future!
+            </p>
+            <p className="video-subtext">
+              Click on the thumbnail below to view the video on YouTube:
             </p>
             <a
               href="https://youtu.be/56-ap6O_Qc0"
@@ -150,6 +154,10 @@ export default function LearnMore() {
               processed and food scraps and yard debris are turned into a
               nutrient-rich soil amendment known as compost.
             </p>
+            <p className="video-subtext">
+              Click on the thumbnail below to view the video on YouTube:
+            </p>
+
             <a
               href="https://youtu.be/z_RnMhL_Xn0"
               className="video-thumbnail-link"
