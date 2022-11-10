@@ -50,8 +50,9 @@ export default function Searchbar({ findSearchInput }) {
         onSubmit={handleSearchSubmit}
         onFocus={handleSearchFocus}
         onBlur={handleSearchFocus}
+        className="form-searchbar"
       >
-        <label>
+        <label className="form-searchbar-label">
           <input
             ref={query}
             type="search"

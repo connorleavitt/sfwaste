@@ -89,9 +89,12 @@ export default function Home() {
         <div className="main-search-container">
           <h4 className="main-search-subtitle">Search Tool</h4>
           <p className="main-search-body-content">
-            The "What Bin?" Search Tool can be used to find out which item can
-            be thrown away in which bin. It will give you the bin type (compost,
-            recycle, landfill or other), general description and related items.
+            The <strong>"What Bin?" Search Tool</strong> can be used to find out
+            which item can be thrown away in which bin.
+            <br></br>
+            <br></br>
+            It will give you the bin type (compost, recycle, landfill or other),
+            general description and related items.
           </p>
           <img
             className="main-search-image"
@@ -99,7 +102,7 @@ export default function Home() {
             alt="what bin"
           ></img>
         </div>
-        <hr className="info-break"></hr>
+        <hr className="info-break hr-main"></hr>
 
         <div className="main-guides-container">
           <h4 className="main-guides-subtitle">Printable Guides and Signage</h4>
