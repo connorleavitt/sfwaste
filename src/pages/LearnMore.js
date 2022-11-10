@@ -8,21 +8,27 @@ export default function LearnMore() {
     <main className="main">
       <h2 className="learn-header-title">Learn More</h2>
       <div className="learn-btns-wrapper">
-        <button className="learn-btn learn-compost-btn">
-          <a href="#compost">COMPOST</a>
-          {""}
-          <FontAwesomeIcon icon="fa-solid fa-angle-down" />
-        </button>
-        <button className="learn-btn learn-recycle-btn">
-          <a href="#recycle">RECYCLE</a>
-          {""}
-          <FontAwesomeIcon icon="fa-solid fa-angle-down" />
-        </button>
-        <button className="learn-btn learn-videos-btn">
-          <a href="#videos">VIDEOS</a>
-          {""}
-          <FontAwesomeIcon icon="fa-solid fa-angle-down" />
-        </button>
+        <a href="#compost" className="learn-link">
+          <button className="learn-btn learn-compost-btn">
+            COMPOST
+            {""}
+            <FontAwesomeIcon icon="fa-solid fa-angle-down" />
+          </button>
+        </a>
+        <a href="#recycle" className="learn-link">
+          <button className="learn-btn learn-recycle-btn">
+            RECYCLE
+            {""}
+            <FontAwesomeIcon icon="fa-solid fa-angle-down" />
+          </button>
+        </a>
+        <a href="#videos" className="learn-link">
+          <button className="learn-btn learn-videos-btn">
+            VIDEOS
+            {""}
+            <FontAwesomeIcon icon="fa-solid fa-angle-down" />
+          </button>
+        </a>
       </div>
       <div className="learn-main-container-wrapper">
         <div className="learn-main-container compost">

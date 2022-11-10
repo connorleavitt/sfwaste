@@ -8,6 +8,11 @@
   font-size: 12px;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 80px;
+}
+
 body {
   text-align: center;
 }
@@ -828,16 +833,23 @@ h4 {
 }
 
 .learn-btn {
-  border: 2px solid black;
+  border: 2px solid gray;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
+  font-size: 1.3rem;
 }
 
-.learn-btn a {
+.learn-link {
   text-decoration: none;
   color: white;
   font-weight: bold;
   font-size: 1.3rem;
+}
+
+.learn-link:visited {
+  text-decoration: none;
+  color: white;
 }
 
 .learn-compost-btn {
@@ -853,7 +865,7 @@ h4 {
 }
 
 .learn-main-container {
-  margin: 2rem 2rem;
+  margin: 2rem;
   padding: 1rem;
   border: 2px solid lightgray;
   border-radius: 5px;
@@ -909,9 +921,80 @@ h4 {
 
 @media (min-width: 600px) {
   .learn-main-container-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .learn-btns-wrapper {
+    justify-content: center;
+  }
+
+  .learn-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
   .learn-btn:hover {
+    border: 2px solid black;
+  }
+
+  .learn-compost-btn:hover {
+    background-color: rgb(14, 163, 51);
+  }
+  .learn-recycle-btn:hover {
+    background-color: rgb(34, 112, 172);
+  }
+  .learn-videos-btn:hover {
+    background-color: rgb(188, 126, 27);
+  }
+
+  .learn-main-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    border: none;
+    padding: 5rem;
+    max-width: 1200px;
+  }
+
+  .learn-info-body-content {
+    justify-content: center;
+    text-align: left;
+    max-width: 75ch;
+  }
+
+  .learn-info-subtitle {
+    text-align: left;
+  }
+
+  .learn-main-container:nth-last-child(2) {
+    margin-top: 0;
+  }
+
+  .learn-main-container.compost,
+  .learn-main-container.recycle {
+    background-color: transparent;
+  }
+
+  .learn-main-container.compost {
+    border: 10px solid green;
+  }
+  .learn-main-container.recycle {
+    border: 10px solid blue;
+  }
+  .learn-main-container.videos {
+    border: 10px solid gray;
+  }
+
+  .video-thumbnail-link,
+  .video-thumbnail-img {
+    max-width: 500px;
+    margin: 0 0 3rem 0;
   }
 }
