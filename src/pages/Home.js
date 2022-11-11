@@ -121,7 +121,7 @@ export default function Home() {
           ></img>
         </div>
 
-        <hr className="info-break"></hr>
+        <hr className="info-break hr-main"></hr>
 
         <div className="main-learn-container">
           <h4 className="main-learn-subtitle">Learn More!</h4>
@@ -130,6 +130,8 @@ export default function Home() {
             information on composting, recycling and more.
           </p>
         </div>
+
+        <hr className="info-break hr-main"></hr>
 
         <div className="footnotes-container">
           <p className="footnote-content">

@@ -33,7 +33,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   padding: 1em;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   background: rgba(62, 174, 47, 0.847);
   z-index: 500;
@@ -329,7 +329,7 @@ h4 {
   font-size: 1.2rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1500px) {
   .main-info {
     margin: 5rem;
     max-width: 1400px;
@@ -431,6 +431,7 @@ h4 {
   margin: 1rem 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .main-guides-subtitle {
@@ -438,11 +439,11 @@ h4 {
 }
 
 .main-guides-body-content {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .main-guides-image {
-  width: 100%;
+  max-width: 80%;
 }
 
 /* LEARN section within HOME */
@@ -461,13 +462,53 @@ h4 {
   font-size: 1.3rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 500px) {
+  .main-info,
+  .main-search-container,
+  .main-guides-container {
+    max-width: calc(100% - 200px);
+  }
+
+  .main-guides-container {
+    margin: 5rem;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-guides-subtitle {
+    grid-area: title;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-guides-body-content {
+    grid-area: content;
+    max-width: 55ch;
+    margin: 0;
+    padding: 3rem;
+  }
+
+  .main-guides-image {
+    max-width: 800px;
+    grid-area: img;
+  }
+}
+
+@media (min-width: 1500px) {
+  .hr-main {
+    position: relative;
+    left: 0;
+    width: 1050px;
+    top: 0;
+    border: 1px solid gray;
+  }
   .main-search-container {
     height: 50rem;
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 1200px;
+    width: 1400px;
     /* background-color: red; */
   }
 
@@ -500,7 +541,7 @@ h4 {
 
   .main-guides-container {
     margin: 5rem;
-    max-width: 1200px;
+    max-width: 1400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr;
@@ -527,6 +568,10 @@ h4 {
   .main-guides-image {
     max-width: 800px;
     grid-area: img;
+  }
+
+  .main-learn-container {
+    max-width: 1400px;
   }
 }
 
@@ -584,7 +629,7 @@ h4 {
 }
 
 .form-searchbar {
-  height: 40px;
+  height: 37px;
   display: flex;
 }
 
