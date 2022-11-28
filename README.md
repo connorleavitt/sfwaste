@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# SF Waste
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SF Waste gives you information about the local San Francisco waste (compost, recycling, landfill and more) methods. It provides details on individual items and related terms within the Search tool. There are additional resources available such as printable posters, instructional videos and external links to find out more.
 
-## Available Scripts
+The app is built with React and utilizes a local, static database. Currently, the photos for individual items are using the Unsplash API.
 
-In the project directory, you can run:
+## Project
 
-### `npm start`
+The purpose behind this project was to learn more about the React best practices, especially using routes and links, public APIs, and a local database. The content and general idea of the app came from the local SF waste company, Recology. My idea was to build a more user friendly search tool for individual items while providing the user additional waste information.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The user interface was designed to be mobile responsive.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Search Tool
 
-### `npm test`
+The “What Bin?” search tool provides the main functionality of the app. A user can learn more information about a specific item’s waste instructions. They can type in a specific item (such as “Eggs” or “Coffee grounds”) and see the information regarding waste type, related items, and a general description.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It highlights the waste method icon and shows a display card with a small action sentence indicating how to dispose of this item. If the item is not in the database, the user will receive an error message instead of a result.
 
-### `npm run build`
+### Guides
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The guides section displays and lists different posters and flyers for the user to print out and use. Each listed link goes to an external PDF file via Recology.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Learn More
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The learn more section provides more information on composting and recycling, such as their meaning and benefits.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+There are also additional video resources from Recology for training and overview info.
